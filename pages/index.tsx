@@ -68,10 +68,10 @@ export default function Home({exploreData, cardData}) {
  
 export async function getStaticProps() {
   const exploreData = fs.readFileSync('public/exploreData.json');
-  const json = JSON.parse(exploreData);
+  const json = JSON.parse(exploreData.toString());
 
   const cardData = fs.readFileSync('public/cardData.json');
-  const json2 = JSON.parse(cardData);
+  const json2 = JSON.parse(cardData.toString());
 
   return {
     props:{
